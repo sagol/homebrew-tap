@@ -3,8 +3,8 @@ class Mdbindery < Formula
 
   desc "Turn Markdown chapters into a validated EPUB 3 ebook"
   homepage "https://github.com/sagol/mdbindery"
-  url "https://github.com/sagol/mdbindery/releases/download/v0.1.0/mdbindery-0.1.0.tar.gz"
-  sha256 "39baa108bc48dd353aeedcb7e7aa4eab6d13871145f5c624cc35610e80ed02b5"
+  url "https://github.com/sagol/mdbindery/releases/download/v0.1.1/mdbindery-0.1.1.tar.gz"
+  sha256 "eada450f326aa4c308a4be404b53c27e4515bad83334fb530c0ab9ec508e25f4"
   license "MIT"
 
   depends_on "libyaml"
