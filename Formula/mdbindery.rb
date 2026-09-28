@@ -1,10 +1,10 @@
 class Mdbindery < Formula
   include Language::Python::Virtualenv
 
-  desc "Turn Markdown chapters into a validated EPUB 3 ebook"
+  desc "Build EPUB 3 ebooks or PDFs from Markdown chapters"
   homepage "https://github.com/sagol/mdbindery"
-  url "https://github.com/sagol/mdbindery/releases/download/v0.1.1/mdbindery-0.1.1.tar.gz"
-  sha256 "eada450f326aa4c308a4be404b53c27e4515bad83334fb530c0ab9ec508e25f4"
+  url "https://github.com/sagol/mdbindery/releases/download/v0.2.0/mdbindery-0.2.0.tar.gz"
+  sha256 "fa61b0c8bb21ba69286eaf45d3cd79fc1717184c595fdd19cd23785f22ee16c1"
   license "MIT"
 
   depends_on "libyaml"
