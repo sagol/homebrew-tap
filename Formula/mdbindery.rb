@@ -6,10 +6,16 @@ class Mdbindery < Formula
   url "https://github.com/sagol/mdbindery/releases/download/v0.2.0/mdbindery-0.2.0.tar.gz"
   sha256 "fa61b0c8bb21ba69286eaf45d3cd79fc1717184c595fdd19cd23785f22ee16c1"
   license "MIT"
+  revision 1
 
   depends_on "libyaml"
   depends_on "pillow"
   depends_on "python@3.13"
+
+  resource "pypdf" do
+    url "https://files.pythonhosted.org/packages/1f/ac/63d71aaedb59acbcdef491e6ca6469165e3771c9c74358204818fd9bc5a6/pypdf-6.19.0.tar.gz"
+    sha256 "bbc43aca292369ccc6cbc8a921991ecf2538a3587ab5a116eff06c321d647155"
+  end
 
   resource "pyyaml" do
     url "https://files.pythonhosted.org/packages/05/8e/961c0007c59b8dd7729d542c61a4d537767a59645b82a0b521206e1e25c2/pyyaml-6.0.3.tar.gz"
@@ -25,12 +31,13 @@ class Mdbindery < Formula
       mdbindery keeps pandoc, EPUBCheck, Node.js, mermaid-cli, and Ace in its own
       tool home. Download them once with:
         mdbindery install-tools
+      PDF export also uses the headless Chrome that install-tools sets up.
     EOS
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/mdbindery --version")
-    system libexec/"bin/python", "-c", "import PIL, yaml"
+    system libexec/"bin/python", "-c", "import PIL, pypdf, yaml"
     (testpath/"book/01-a.md").write "# A\n\nText.\n"
     assert_match "mdbindery check", shell_output("#{bin}/mdbindery check #{testpath}/book --no-render")
   end
