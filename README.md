@@ -1,6 +1,6 @@
 # sagol/tap
 
-Homebrew formulas for [mdbindery](https://github.com/sagol/mdbindery), which turns a folder or GitHub repository of Markdown chapters into a validated EPUB 3.
+Homebrew formulas for [mdbindery](https://github.com/sagol/mdbindery), which turns a folder or GitHub repository of Markdown chapters into a validated EPUB 3 or a paginated PDF.
 
 ```
 brew install sagol/tap/mdbindery
